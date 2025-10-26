@@ -18,7 +18,7 @@ body {
 
 :root {
   --text-color: white;
-  --bg-url: url(./assets/bg-desktop.jpg);
+  --bg-url: url(./assets/bg-mobile.jpg);
   --stroke-color: 1px solid rgba(255, 255, 255, 0.5);
   --surface-color: rgba(255, 255, 255, 0.1);
   --surface-color-hover: rgba(255, 255, 255, 0.5);
@@ -144,6 +144,16 @@ ul li a:hover {
   border: 1.5px solid var(--text-color);
 }
 
+ul li a div {
+  width: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 25px;
+  margin-left: 33%;
+  margin-right: 5px;
+}
+
 #social-links {
   display: flex;
   padding: 24px;
@@ -164,18 +174,19 @@ ul li a:hover {
   background: var(--socia-link-hover);
 }
 
-ul li a div {
-  width: 32px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 25px;
-  margin-left: 33%;
-  margin-right: 5px;
-}
-
 footer {
   text-align: center;
   padding: 24px 0;
   font-size: 14px;
+}
+
+/* media queries*/
+@media (min-width: 700px) {
+  :root {
+    --bg-url: url(./assets/bg-desktop.jpg);
+  }
+
+  .light {
+    --bg-url: url(./assets/bg-desktop-light.jpg);
+  }
 }
